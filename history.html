@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Workout History</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="min-h-screen bg-slate-50">
+        <!--all previous progressions-->
+        <div id="history-page-cont" class="max-w-3xl mx-auto px-4 py-8 space-y-6">
+            <div id="workout-history-cont" class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 space-y-4">
+                <div class="flex items-center justify-between gap-4">
+
+                    <h1 class="text-2xl font-semibold tracking-tight text-slate-900">
+                        Workout History
+                    </h1>
+
+                    <button id="history-to-home-btn" class="h-10 px-4 rounded-xl border border-slate-300 bg-white text-slate-900 hover:bg-slate-50 transition">
+                        Home
+                    </button>
+
+                </div>
+
+                <div id="workout-history-card" class="space-y-3"> 
+
+                </div>
+            </div>
+
+            <!--hidden card for displaying past workouts-->
+            <div id="previous-workout-cont" class="hidden bg-white border border-slate-200 rounded-2xl shadow-sm p-6 space-y-6">
+
+                <div class="flex items-center justify-between gap-4">
+
+                    <h3 id="previous-workout-header" class="text-2xl font-semibold tracking-tight text-slate-900">
+
+                    </h3>
+
+                    <button id="previous-to-history-btn" class="h-10 px-4 rounded-xl border border-slate-300 bg-white text-slate-900 hover:bg-slate-50 transition">
+                        Back
+                    </button>
+                </div>
+                <div id="previous-workout-display-card" class="overflow-hidden border border-slate-200 rounded-2xl">
+
+                </div>
+
+                
+            </div>
+
+            
+        </div>
+        <script type="module" src="./js/history.js"></script>
+
+    </body>
+</html>

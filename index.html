@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Workout Incrementer</title>
+        <script src="https://cdn.tailwindcss.com"></script> 
+
+    </head>
+    <body class="min-h-screen bg-slate-50">
+
+        <div id="main-page-container" class="max-w-3xl mx-auto px-4 py-8 space-y-6">
+            <!--Main card-->
+            <div id="main-card" class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 space-y-6">
+
+                <h1 class="text-2xl font-semibold tracking-tight text-slate-900">
+                    Workout Volume Incrementer
+                </h1>
+
+                <!--input card-->
+                <div id="input-cont" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="exercise-name" class="text-base font-medium text-slate-700">
+                            Exercise Name
+                        </label>
+                        <input id="exercise-name" type="text" placeholder="Bench Press" class="mt-1 w-full h-10 rounded-xl border border-slate-300 bg-white px-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400/40 focus:border-slate-400">
+                    </div>
+
+                    <div>
+                        <label for="starting-weight" class="text-base font-medium text-slate-700">
+                            Starting Weight
+                        </label>
+                        <input id="starting-weight" type="number" placeholder="135" class="mt-1 w-full h-10 rounded-xl border border-slate-300 bg-white px-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400/40 focus:border-slate-400">
+                    </div>
+
+                    <div>
+                        <label for="starting-sets" class="text-base font-medium text-slate-700">
+                            Starting Sets
+                        </label>
+                        <input id="starting-sets" type="number" class="mt-1 w-full h-10 rounded-xl border border-slate-300 bg-white px-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400/40 focus:border-slate-400">
+                    </div>
+
+                    <div>
+                        <label for="starting-reps" class="text-base font-medium text-slate-700">
+                            Starting Reps
+                        </label>
+                        <input id="starting-reps" type="number" class="mt-1 w-full h-10 rounded-xl border border-slate-300 bg-white px-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400/40 focus:border-slate-400">
+                    </div>
+                </div>
+
+                <!--variation card-->
+                <div id="variation-select-cont" class="rounded-2xl bg-slate-200/70 border border-slate-300 p-5 space-y-4">
+
+                    <div class="text-center mb-3">
+                        <h2 class="text-base font-semibold text-slate-800">
+                            Variation
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                        <!--weight-->
+                        <div>
+                            <label for="weight-variation" class="text-base font-medium text-slate-800">
+                                Weight Varation
+                            </label>
+
+                            <select id="weight-variation" class="mt-1 w-full h-10 rounded-xl bg-slate-50 border border-slate-700 px-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-white/20">
+                                <option value="0">0</option>
+                                <option value="5" selected>5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <!--sets-->
+                        <div>
+                            <label for="set-variation" class="text-base font-medium text-slate-800">
+                                Set Variation
+                            </label>
+                            <select id="set-variation" class="mt-1 w-full h-10 rounded-xl bg-slate-50 border border-slate-700 px-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-white/20">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+
+                        <!--reps-->
+                        <div>
+                            <label for="rep-variation" class="text-base font-medium text-slate-800">
+                                Rep Variation
+                            </label>
+                            <select id="rep-variation" class="mt-1 w-full h-10 rounded-xl bg-slate-50 border border-slate-700 px-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-white/20">
+                                <option value="0" selected >0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!--cycle length input-->
+                <div id="main-button-cont" class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+                    <div class="w-full md:w-40">
+                        <label for="cycle-length" class="text-base font-medium text-slate-700">
+                            Cycle Length
+                        </label>
+                        <select id="cycle-length" class="mt-1 w-full h-10 rounded-xl bg-white border border-slate-300 px-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-400/40 focus:border-slate-400">
+                            <option value="4" selected >4</option>
+                            <option value="5" >5</option>
+                            <option value="6" >6</option>
+                            <option value="7" >7</option>
+                            <option value="8" >8</option>
+                            <option value="9" >9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 sm:justify-end">
+
+                        <button id="generate-workout-btn" class="h-10 px-4 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400/40">
+                            Generate workout
+                        </button>
+
+                        <button id="home-to-history-btn" class="h-10 px-4 rounded-xl border border-slate-300 bg-white text-slate-900 hover:bg-slate-50 transition focus:outline-none focus:ring-2 focus:ring-slate-400/40">
+                            Go to previous workouts
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- hidden card for displaying workout -->
+            <div id="workout-display-card" class="hidden bg-white border border-slate-200 rounded-2xl shadow-sm p-6 space-y-6">
+                <div class="flex items-start justify-between gap-4">
+
+                    <div class="flex">
+                        <h1 class="text-2xl font-semibold tracking-tight text-slate-900">Generated Workout</h1>
+                    </div>
+                    <!--workout containter-->
+                    <div id="workout-cont" class="overflow-hidden border border-slate-200 rounded-2xl">
+                    
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button id="back-to-main-btn" class="h-10 px-4 rounded-xl border border-slate-300 bg-white text-slate-900 hover:bg-slate-50 transition">
+                            Back
+                        </button>
+                    
+                        <button id="save-workout-btn" class="h-10 px-4 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition shadow-sm">
+                            Save
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--import java-->
+        <script type="module" src="./js/index.js"></script>
+    </body>
+</html>
