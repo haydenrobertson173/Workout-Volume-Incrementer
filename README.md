@@ -34,3 +34,6 @@ Because this project uses ES modules, it requires a local server.
 python3 -m http.server 8000 
 ```
 Then open http://localhost:8000 in your browser.
+
+## TODO
+- fix resizing issues for small screens
