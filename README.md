@@ -37,3 +37,4 @@ Then open http://localhost:8000 in your browser.
 
 ## TODO
 - fix resizing issues for small screens
+- stress test inputs / number values -> error messages
